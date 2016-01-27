@@ -1,0 +1,27 @@
+{
+  "name": "playcorners",
+  "description": "get details, updates, and information on events and fun places happening around you. With directions to the venue.",
+  "main": "app.js",
+  "authors": [
+    "Atolagbe Bisoye"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.3",
+    "satellizer": "~0.13.4",
+    "ngToast": "ngtoast#~1.5.6",
+    "ui-router": "~0.2.15",
+    "angular-messages": "~1.4.7",
+    "ng-file-upload": "~10.0.2"
+  }
+}
