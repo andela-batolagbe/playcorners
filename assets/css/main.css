@@ -1,0 +1,494 @@
+@import url(http://fonts.googleapis.com/css?family=Dosis:400,200,300,500,600,700,800);
+@import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,300,200,700);
+
+
+/*************************
+*******Typography******
+**************************/
+
+body {
+  font-family: 'Dosis', sans-serif;
+  font-size: 17px;
+  background-color: #505050
+}
+
+
+.btn {
+  border-radius: 0;
+  font-family: 'Yanone Kaffeesatz','sans-serif';
+  font-size: 20px;
+  padding: 9px 23px;
+}
+
+a {
+  -webkit-transition: 300ms;
+  -moz-transition: 300ms;
+  -o-transition: 300ms;
+  transition: 300ms;
+}
+
+a:focus, 
+a:hover {
+  text-decoration: none;
+  outline: none
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Yanone Kaffeesatz', 'sans-serif';
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 36px
+}
+
+.fa {
+  margin: 0 10%;
+}
+
+.navbar-toggle {
+
+}
+
+.navbar-toggle .icon-bar {
+  background-color: #fff;
+}
+
+.navbar-toggle, 
+.navbar-toggle:focus {
+  border:1px solid #fff;
+  outline: none;
+}
+
+
+/*************************
+*******Header CSS******
+**************************/
+
+.header-top {
+  display: block;
+  overflow: hidden;
+  padding: 25px;
+}
+
+.header-top .fa {
+  margin: 0 !important;
+}
+.main-nav {
+  position: absolute;
+  width: 100%;
+  z-index: 999;
+}
+
+.main-nav 
+.container {
+  width: 100%
+}
+
+.social-icons a {
+  font-size: 18px;
+  color: #fff;
+  padding-left:20px;  
+}
+
+.social-icons .fa-facebook:hover {
+  color: #3B5997
+}
+
+.social-icons .fa-twitter:hover {
+  color:#29C5F6
+}
+
+.social-icons .fa-google-plus:hover {
+  color:#D13D2F
+}
+
+.social-icons .fa-youtube:hover{
+  color: #ec5538
+}
+
+.navbar-brand {
+  background-color: #1B7BBA;
+  height: 90px;
+  margin-bottom: 20px;
+  position: relative;
+  width: 297px;
+}
+
+.navbar-brand img {
+  height:120%;
+  top: 0;
+}
+
+.navbar-right {
+  background-color: #1B7BBA;
+  padding:0 95px 0 0;
+  opacity: .9
+}
+
+.navbar-right li a {
+  padding: 35px 21px;
+  font-size: 22px;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Yanone Kaffeesatz', 'sans-serif';
+  font-weight: 100;
+}
+
+.navbar-right li a:hover, 
+.navbar-right li a:focus,  
+.navbar-right .active a {
+  background-color: #fff;
+  color: #16728f
+}
+
+
+.fixed-menu {
+  background-color: #1B7BBA;
+  position: fixed;
+  top: 0;
+}
+
+.fixed-menu .navbar-right {
+  padding: 0;
+}
+
+
+.fixed-menu .navbar-right li a {
+  font-size: 18px;
+  padding: 20px 25px;
+  text-shadow:inherit;
+}
+
+.fixed-menu .navbar-brand {
+  height: 60px;
+  margin-top: 0;
+  padding: 0;
+  margin-bottom: 0;
+  width: 100%;
+}
+
+.fixed-menu .navbar-brand img {
+  height:60px;
+  top: 0;
+}
+
+.fixed-menu .header-top {
+  display: none;
+
+}
+
+
+
+/*************************
+*******Home CSS******
+**************************/
+
+#home {
+  position: relative;
+  overflow: hidden;
+}
+
+#main-slider img {
+  width: 100%;
+  height: 900px;
+}
+
+#main-slider 
+.carousel-indicators li {
+  background-color:#1B7BBA;
+  border: 1px solid #1B7BBA;
+}
+
+#main-slider 
+.carousel-indicators li.active {
+  background-color:#fff;
+  border: 1px solid #fff;
+}
+
+.heading {
+  font-size: 50px;
+  font-weight: 400;
+  color: #ffffff;
+}
+#search-bar {
+  position: absolute;
+  top: 40%;
+}
+
+.search-box  {
+  color: #1B7BAA;
+}
+
+/*************************
+*******Buttons******
+**************************/
+
+.blue-btn {
+  background-color: #1B7BBA;
+}
+
+.blue-btn:hover, 
+.blue-btn:focus,  
+.blue-btn:active {
+  background-color: #1B7B98;
+}
+
+.blue-btn-text{
+  color: #ffffff;
+}
+
+.light-btn {
+  background-color: #ffffff;
+}
+
+.light-btn:hover, 
+.light-btn:focus,  
+.light-btn:active {
+  background-color: #f0f0f0;
+}
+
+.light-btn-text{
+  color: #1B7BBA;
+}
+
+
+ /*************************
+*******Event CSS******
+**************************/
+#event {
+  background-color: #1881a2;
+  background-image: url("../images/sponsor-bg.jpg");
+  background-position: center bottom;
+  background-size: contain;
+  position: relative;
+  background-repeat: no-repeat;
+}
+
+
+#event h2 {
+  color: #FFFFFF;
+  font-size: 36px;
+  font-weight: 300;
+  margin-bottom: 40px;
+  margin-top: 70px;
+  text-transform: uppercase;
+}
+
+.single-event {
+  margin-bottom: 70px;
+}
+
+.single-event h4 {
+  color: #FFFFFF;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 26px;
+  margin-top: 25px;
+  text-transform: uppercase;
+}
+
+
+.single-event h5 {
+  font-size: 18px;
+  font-weight: 100;
+  display: block;
+}
+
+/*************************
+*******About CSS**********
+**************************/
+
+#about {
+  background-color: #505050;  
+  position: relative;  
+  width: 100%;
+  display: flex;
+}
+
+.about-content {
+  width: 50%;
+   background-image: url("../images/about.jpg");
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 70px 70px 110px;
+}
+
+.about-image {
+  display: flex;
+}
+#about h2 {
+  margin-bottom: 23px;
+}
+
+.about-content p {
+  font-size: 17px;
+  font-family: 'Dosis',sans-serif;
+}
+
+/*************************
+******Contact CSS****
+**************************/
+
+.contact-section {
+  background-color: #f0f0f0;
+  background-image: url("../images/twitter-bg.jpg");
+  background-position:60% 0;
+  background-size:contain;
+  background-repeat: repeat;  
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.register {
+  position: relative;
+  padding-right: 10%; 
+  border-right: 3px solid #1B7BBA;
+}
+
+.fa-hand-o-right {
+  font-size: 3em;
+} 
+
+.fa-hand-o-down {
+  display: none;
+} 
+
+.contact-pointer {
+  margin-top: 10%;
+}
+.row {
+  padding-left: 5%;
+}
+#contact .container {
+  padding-top:47px;
+}
+
+.contact-text {
+  text-transform:inherit;
+  color: #1B7BBA; 
+  margin-bottom: 35px;
+  display: block;
+}
+
+.contact-section h1 {  
+  font-size: 50px;
+  font-weight: 400;
+  margin: 3%;
+}
+.contact-section h2 {  
+  margin-bottom: 5%;
+}
+
+#contact address {
+  font-size: 18px;  
+  color: #1B7BBA; 
+}
+
+
+#contact-section .form-control {
+  border-color: none;
+  box-shadow:none;
+  outline: 0 none;
+  border-radius: 0;
+  color: #797979;
+  font-size: 18px;
+}
+
+#contact-section .form-control:focus {
+  border-color: #1B7BBA;
+}
+
+#contact-section input {  
+  height: 44px;
+}
+
+#contact-section textarea {
+  height: 90px;
+  resize:none;
+}
+
+/*************************
+******Footer CSS****
+**************************/
+
+#footer {
+  background-color: #212121;
+  background-image: url("../images/sponsor-bg.jpg");
+  background-position: center bottom;
+  background-repeat: repeat;
+  background-size: cover;
+  color: #FFFFFF;
+  font-size: 20px;
+  padding: 35px 0;
+}
+
+#footer a {
+  color:#f7ab24
+}
+
+#footer a:hover {
+  color:#1B7B98
+}
+
+/*************************
+****** Media Queries ****
+**************************/
+
+@media (max-width: 768px) {
+
+  .fixed-menu {
+    position: fixed;
+    padding-bottom: 10px;
+  }
+
+  .navbar-brand {
+
+    height: 90px;
+    margin-bottom: 20px;
+    position: relative;
+    width: 100px;
+  }
+
+  .fixed-menu .navbar-brand {
+    margin-top: -2;
+    width: 70%;
+  }
+
+  #main-slider img {
+    height: 500px !important;
+  }
+
+  #search-bar {
+    position: absolute;
+    top: 30% !important;
+  }
+
+  .fa-hand-o-right {
+    display: none;
+  } 
+
+  .fa-hand-o-down {
+    display: block;
+    font-size: 2em;
+  } 
+
+  .about-image {
+    display: none;
+  }
+}
+
+@media (max-width: 990px) {
+
+  .fa-hand-o-right {
+    display: none;
+  } 
+
+  .fa-hand-o-down {
+    display: block;
+    font-size: 2em;
+  } 
+
+}
