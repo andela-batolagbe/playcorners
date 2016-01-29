@@ -1,6 +1,6 @@
 'user-strict';
 
-var app = angular.module('playcorners', ['ui.router', 'ngMessages', 'satellizer', 'ngStorage', 'ngFileUpload']);
+var app = angular.module('playcorners', ['ui.router', 'ngMessages', 'satellizer', 'ngStorage', 'ngFileUpload', 'ngAnimate']);
 
 app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', '$authProvider',
   function($stateProvider, $urlRouterProvider, $locationProvider, $authProvider) {
@@ -15,7 +15,10 @@ app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', '$authP
           },
           'views@Home': {
             templateUrl: 'app/views/home.html',
-            // controller: 'HomeCtrl'
+            // controller: 'MainCtrl'
+          },
+          'footer@Home': {
+            templateUrl: 'app/views/footer.html',
           }
         }
       })
@@ -28,7 +31,10 @@ app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', '$authP
           },
           'views@Register': {
             templateUrl: 'app/views/register.html',
-            controller: 'UserCtrl'
+            controller: 'userCtrl'
+          },
+          'footer@Register': {
+            templateUrl: 'app/views/footer.html',
           }
         }
       })
@@ -41,7 +47,10 @@ app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', '$authP
           },
           'views@Login': {
             templateUrl: 'app/views/login.html',
-            controller: 'UserCtrl'
+            controller: 'userCtrl'
+          },
+          'footer@Login': {
+            templateUrl: 'app/views/footer.html',
           }
         }
       })
@@ -55,7 +64,10 @@ app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', '$authP
           'views@AddEvent': {
             templateUrl: 'app/views/add-event.html',
             controller: 'EventCtrl'
-          }
+          },
+          'footer@AddEvent': {
+            templateUrl: 'app/views/footer.html',
+          }        
         }
       })
       .state('SearchResult', {
@@ -68,6 +80,9 @@ app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', '$authP
           'views@SearchResult': {
             templateUrl: 'app/views/search-results.html',
             controller: 'EventCtrl'
+          },
+          'footer@SearchResult': {
+            templateUrl: 'app/views/footer.html',
           }
         }
       })
@@ -81,6 +96,9 @@ app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', '$authP
           'views@EventDetails': {
             templateUrl: 'app/views/event-details.html',
             controller: 'EventCtrl'
+          },
+          'footer@EventDetails': {
+            templateUrl: 'app/views/footer.html',
           }
         }
       });
