@@ -1,0 +1,70 @@
+<section id="login" class="container-fluid" ng-controller="userCtrl">
+<div class="wrapper">
+  <h1 class="heading blue-text text-center">Sign In</h1>
+  <div class="panel col-md-6 col-md-offset-3">
+    <div class="panel-heading">
+      <h3 class="blue-text text-center">Sign in to your PlayCorners Account</h3>
+    </div>
+    <div class="panel-body">
+        <form class="form-horizontal" name="loginForm" novalidate>
+              <div class="form-group input-group col-md-6 col-md-push-3" 
+              ng-class="{ 'has-success': loginForm.username.$touched && loginForm.username.$valid }">
+                <span class="input-group-addon"> <i class="blue-text fa fa-user"></i></span>
+                <input required ng-minlength="3" ng-maxlength="20" ng-model="username" 
+                type="text" name="username" class="form-control" placeholder="Username">
+                
+                <!-- Username error notification -->
+                <div class="error-prompt" ng-messages="loginForm.username.$error" ng-show="loginForm.username.$touched">
+                  <p  class="help-block light-text" ng-message="required">Name field cannot be empty</p>
+                  <p class="help-block light-text"  ng-message="minlength">Minimum of 3 characters required</p>
+                  <p  class="help-block light-text" ng-message="maxlength">Maximum of 20 characters</p>
+                </div>
+              </div>
+
+              <div class="form-group input-group col-md-6 col-md-push-3"
+               ng-class="{ 'has-success': loginForm.password.$touched && loginForm.password.$valid }">
+                <span class="input-group-addon"> <i class="blue-text fa fa-lock"></i></span>
+                <input required ng-minlength="6" ng-model="password" 
+                type="password" name="password" class="form-control has-error" placeholder="Password">
+                 
+                  <!-- Password error notification -->
+                <div ng-messages="loginForm.password.$error" class="error-prompt" ng-show="loginForm.password.$touched">
+                  <p class="help-block light-text" ng-message="required">Password field cannot be empty</p>
+                  <p class="help-block light-text" ng-message="minlength">Minimum of 6 characters required</p>
+                  <p class="help-block light-text" ng-message="invalidPassword">{{errorMessage}}</p>
+                </div>
+              </div>                        
+              <div class="form-group text-center">
+                  <button ng-click="logIn()" type="submit" ng-disabled="loginForm.$invalid" 
+                  class="btn buttons blue-btn blue-btn-text">Submit <i class="light-text fa fa-share-square"></i></button>
+                  <a href="/"> 
+                    <button class="btn buttons light-btn light-btn-text">Cancel <i class="blue-text fa fa-times"></i></button>
+                  </a>
+              </div>
+          </form>        
+      </div>
+      <div class="register-note text-center">
+        <h3 class="blue-text form-header text-center">Don't have an account Yet?</h3>
+        <a href="/register" class="btn blue-btn blue-btn-text">Register<i class="light-text fa fa-chevron-circle-right"></i></a>
+         <div class="visible-xs">
+          <h4 class="blue-text text-center">or Login with your social accounts</h4>
+          <a href="#"><i class="fa icon-large blue-text fa-twitter"></i></a>
+          <a href="#"><i class="fa icon-large blue-text fa-facebook"></i></a>
+          <a href="#"><i class="fa icon-large blue-text fa-google"></i></a> 
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-md-offset-4 hidden-xs">
+      <h4 class="blue-text text-center">or Login with your social accounts</h4>
+      <div class="col-md-2 col-md-push-2 social">
+        <a ng-click="authenticate('twitter')"><i class="fa icon-large blue-text fa-twitter"></i></a>
+      </div>
+      <div class="col-md-2 col-md-push-2 social center">
+        <a ng-click="authenticate('facebook')"><i class="fa icon-large blue-text fa-facebook"></i></a>
+      </div>
+      <div class="col-md-2 col-md-push-2 social">
+        <a ng-click="authenticate('google')"><i class="fa icon-large blue-text fa-google"></i></a> 
+      </div>
+    </div>
+  </div>
+</section>
