@@ -1,0 +1,78 @@
+<section id="register" class="container-fluid" ng-controller="userCtrl">
+<div class="wrapper">
+  <h1 class="heading blue-text text-center">Register</h1>
+  <div class="panel col-md-6 col-md-offset-3">
+    <div class="panel-heading">
+      <h3 class="blue-text text-center">Join playcorners, post events for free</h3>
+    </div>
+    <div class="panel-body">
+        <form class="form-horizontal" name="registerForm" novalidate>
+              <div class="form-group input-group col-md-6 pull-right" 
+                ng-class="{ 'has-success': registerForm.avatar.$touched && registerForm.avatar.$valid }">
+                  <span class="input-group-addon"> <i class="blue-text fa fa-picture-o"></i>Avatar</span>
+                  <input name="avatar" ngf-select ng-model="imageFile" id="avatar" type="file" class="form-control file-loading" ngf-max-size="2MB" accept="image/*">
+              </div>
+
+              <div class="form-group input-group col-md-6"
+                ng-class="{ 'has-success': registerForm.username.$touched && registerForm.username.$valid }">
+                  <span class="input-group-addon"> <i class="blue-text fa fa-user"></i></span>
+                  <input type="text" required ng-minlength="3" ng-maxlength="20"
+                  ng-model="username" name="username" class="form-control" placeholder="Username">
+                
+                <!-- Username error notification -->
+                <div class="error-prompt" ng-messages="registerForm.username.$error" ng-show="registerForm.username.$touched">
+                  <p  class="help-block light-text" ng-message="required">Name field cannot be empty</p>
+                  <p class="help-block light-text"  ng-message="minlength">Minimum of 3 characters required</p>
+                  <p  class="help-block light-text" ng-message="maxlength">Maximum of 20 characters</p>
+                </div>
+              </div>
+
+              <div class="form-group input-group col-md-6"
+                ng-class="{ 'has-success': registerForm.email.$touched && registerForm.email.$valid }">
+                  <span class="input-group-addon"> <i class="blue-text fa fa-envelope"></i></span>
+                  <input type="email" required
+                  ng-model="email" name="email" class="form-control" placeholder="Email">
+
+                  <!-- Email error notification -->
+                <div class="error-prompt" ng-messages="registerForm.email.$error" ng-show="registerForm.email.$touched">
+                  <p  class="help-block light-text" ng-message="required">Email field cannot be empty</p>
+                  <p class="help-block light-text"  ng-message="email">Please provide a valid email</p>
+                </div>
+              </div>
+              <div class="form-group input-group col-md-6"
+                ng-class="{ 'has-success': registerForm.password.$touched && registerForm.password.$valid }">
+                  <span class="input-group-addon"> <i class="blue-text fa fa-lock"></i></span>
+                  <input type="password" required ng-minlength="6"
+                  ng-model="password" name="password" class="form-control" placeholder="Password">
+                
+                  <!-- Password error notification -->
+                <div class="error-prompt" ng-messages="registerForm.password.$error" ng-show="registerForm.password.$touched">
+                  <p  class="help-block light-text" ng-message="required">Password field cannot be empty</p>
+                  <p class="help-block light-text"  ng-message="minlength">Minimum of 6 characters required</p>
+                </div>
+              </div>
+
+              <div class="form-group input-group col-md-6"
+                ng-class="{ 'has-success': registerForm.verifyPassword.$touched && registerForm.verifyPassword.$valid }">
+                  <span class="input-group-addon"> <i class="blue-text fa fa-lock"></i></span>
+                  <input type="password" required ng-minlength="6" ng-model="verifyPassword" ng-pattern="{{password}}" 
+                  name="verifyPassword" class="form-control" placeholder="Re-enter Password">
+
+                  <!-- Username error notification -->
+                <div class="error-prompt" ng-messages="registerForm.verifyPassword.$error" ng-show="registerForm.verifyPassword.$touched">
+                  <p  class="help-block light-text" ng-message="required">Verify Password field cannot be empty</p>
+                  <p class="help-block light-text"  ng-message="pattern">Password does not match</p>
+                </div>
+              </div>                        
+              <div class="form-group text-center">
+                  <button ng-click="signUp()" type="submit" ng-disabled="registerForm.$invalid" 
+                  class="btn buttons blue-btn blue-btn-text">Register <i class="light-text fa fa-share-square"></i></button>
+                  <a href="/">
+                    <button class="btn buttons light-btn light-btn-text">Cancel <i class="blue-text fa fa-times"></i></button>
+                  </a>
+              </div>
+          </form>        
+      </div>
+    </div>
+  </div>
+</section>
